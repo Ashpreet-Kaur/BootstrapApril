@@ -1,0 +1,128 @@
+Bootstrap is a free, open-source CSS framework that provides ready-made classes for styling, layout, and responsiveness without writing CSS from scratch.
+
+========================================
+  BOOTSTRAP NOTES - QUICK REFERENCE
+========================================
+
+----------------------------------------
+1. SETUP (CDN)
+----------------------------------------
+Add these inside <head> and before </body>:
+
+CSS (in <head>):
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.x/dist/css/bootstrap.min.css" rel="stylesheet">
+
+JS Bundle (before </body>):
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.x/dist/js/bootstrap.bundle.min.js"></script>
+
+You can also link your own style.css AFTER the Bootstrap CDN so your custom styles override Bootstrap.
+
+----------------------------------------
+2. COLORS
+----------------------------------------
+Bootstrap has 8 theme colors:
+  primary, secondary, success, danger, warning, info, light, dark
+
+Text color classes:
+  text-primary | text-secondary | text-success | text-danger
+  text-warning  | text-info      | text-light   | text-dark
+
+Background color classes:
+  bg-primary | bg-secondary | bg-success | bg-danger
+  bg-warning | bg-info      | bg-light   | bg-dark
+
+Example:
+  <h1 class="text-primary bg-warning">Heading</h1>
+
+You can mix text and background color classes on the same element.
+
+----------------------------------------
+3. TYPOGRAPHY
+----------------------------------------
+Text Alignment:
+  text-start   -> left align
+  text-center  -> center align
+  text-end     -> right align
+
+Font Size (fs = font-size, scale 1-6):
+  fs-1  (largest) ... fs-6  (smallest, ~1rem)
+
+Font Weight:
+  fw-bold | fw-semibold | fw-normal | fw-light | fw-lighter
+
+Text Transform:
+  text-uppercase   -> ALL CAPS
+  text-lowercase   -> all lowercase
+  text-capitalize  -> First Letter Of Each Word
+
+Text Decoration:
+  text-decoration-underline
+  text-decoration-line-through
+  text-decoration-none
+
+----------------------------------------
+4. SPACING (Margin & Padding)
+----------------------------------------
+Format:  {property}{sides}-{size}
+
+Property:
+  m = margin    p = padding
+
+Sides:
+  t = top    b = bottom    s = start(left)    e = end(right)
+  x = left+right           y = top+bottom
+  (no side letter = all 4 sides)
+
+Size scale: 0, 1, 2, 3, 4, 5  (0=none, 5=largest ~3rem)
+  auto = auto margin (useful for centering)
+
+Examples:
+  my-5   -> margin top & bottom, size 5
+  m-5    -> margin all sides, size 5
+  p-3    -> padding all sides, size 3
+  ms-auto -> margin-start auto
+
+----------------------------------------
+5. SIZING (Width & Height)
+----------------------------------------
+Width classes:
+  w-25 | w-50 | w-75 | w-100 | w-auto
+
+Height classes:
+  h-25 | h-50 | h-75 | h-100 | h-auto
+
+Note: height classes work relative to the parent element's height.
+The parent must have a defined height for h-* to take effect.
+
+Example:
+  <p class="h-75 w-100">...</p>   inside a div with a set height
+
+----------------------------------------
+6. BORDERS
+----------------------------------------
+Add border:          border
+Remove border:       border-0
+Border sides:        border-top | border-bottom | border-start | border-end
+
+Border width (1-5):  border-1 | border-2 | border-3 | border-4 | border-5
+
+Border color:
+  border-primary | border-secondary | border-success | border-danger
+  border-warning  | border-info      | border-light   | border-dark
+
+Example:
+  <button class="border border-2 border-info">Click</button>
+
+----------------------------------------
+7. COMBINING BOOTSTRAP WITH CUSTOM CSS
+----------------------------------------
+- Bootstrap classes and your own custom classes can be used together on the same element.
+- Always link your custom CSS file AFTER the Bootstrap CDN in <head>.
+- Use custom classes to override or extend Bootstrap styles.
+
+Example:
+  <p class="text-danger custom-para">...</p>
+  /* In style.css */
+  .custom-para { font-size: 1.2rem; letter-spacing: 1px; }
+
+========================================

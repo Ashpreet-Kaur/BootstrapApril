@@ -1,0 +1,14 @@
+.custom-para{
+    background-color: aquamarine;
+}
+
+.text-secondary{
+    color: red !important;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(61, 61, 111);
+    color: white
+}
