@@ -12,3 +12,24 @@
     background-color: rgb(61, 61, 111);
     color: white
 }
+
+
+
+.custom-accordian{
+    width: 500px;
+    margin: 50px auto;
+}
+
+
+.button-custom{
+    background-color: rgb(33, 66, 66) ;
+    color: white
+}
+
+
+
+.custom-col{
+    background-color: thistle !important;
+    height: 100px !important;
+    border: 1px solid black !important;
+}
