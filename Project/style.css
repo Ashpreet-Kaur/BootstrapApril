@@ -460,13 +460,79 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px
+    gap: 30px;
+    z-index: 100;
 }
 
-.hero-bottom .col-auto:before{
+.hero-bottom .col-auto{
+    position: relative;
+    padding-left: 14px !important;
+}
+
+.hero-bottom .col-auto::before{
     content: "•";
     color: var(--light);
     font-size: 12px;
-    margin: 0 -10px;
+    position: absolute;
+    transform: translateY(-10px) translateX(-20px);
+    z-index: 200;
+    opacity: 0.3;
+}
 
+
+.companies-section{
+    background-color:rgb(243, 249, 250);
+}
+
+
+.company-card, .coordinator-card{
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 30px  !important;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    min-width: 250px;
+   transition: all 0.3s ease-in-out;
+}
+
+
+.company-card:hover, .coordinator-card:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+
+.coordinator-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 20px
+}
+
+
+.placed-students-count{
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
